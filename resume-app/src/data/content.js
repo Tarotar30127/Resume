@@ -53,7 +53,8 @@ export const PROJECTS = [
     badge: 'LATEST',
     badgeColor: 'emerald',
     category: 'Collaboration & Development',
-    headline: 'Bridging the Gap: New Excel Learning Path Launches for Business Students',
+    headline:
+      'Bridging the Gap: New Excel Learning Path Launches for Business Students',
     byline: 'By Carter Lee  |  Collaboration & Development',
     summary:
       'Collaborated with a 3-person team to design a comprehensive learning path. Developed hands-on challenges in SQL, Power BI, and Alteryx using real-world datasets.',

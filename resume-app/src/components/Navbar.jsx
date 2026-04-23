@@ -40,18 +40,18 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/5 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/30'
-          : 'bg-transparent'
+          ? 'bg-white/5 backdrop-blur-xl border-b border-emerald-accent/30 shadow-lg shadow-black/30'
+          : 'bg-transparent border-b border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
         <motion.span
-          className="font-display font-black text-xl text-white tracking-tight cursor-pointer"
+          className="font-serif font-black text-lg md:text-xl text-white tracking-widest cursor-pointer uppercase"
           whileHover={{ color: '#10b981' }}
           transition={{ duration: 0.2 }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          CL<span className="text-emerald-accent">.</span>
+          The Lee <span className="text-emerald-accent">Gazette</span>
         </motion.span>
 
         {/* Desktop links */}
