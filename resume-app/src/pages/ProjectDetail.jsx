@@ -4,9 +4,9 @@ import { PROJECTS } from '../data/content';
 import ParticleBackground from '../components/ParticleBackground';
 
 const BADGE_STYLES = {
-  emerald: 'bg-emerald-accent text-bg',
-  blue: 'bg-blue-accent text-white',
-  amber: 'bg-amber-400 text-bg',
+  emerald: 'bg-sky-accent text-navy',
+  blue: 'bg-coral-accent text-white',
+  amber: 'bg-amber-400 text-white',
 };
 
 const fadeUp = (delay = 0) => ({
@@ -27,10 +27,9 @@ export default function ProjectDetail() {
     <section className="relative min-h-screen flex items-start justify-center overflow-hidden pt-32 pb-24 px-6">
       {/* Ambient gradient */}
       <div
-        className="absolute inset-0 z-0 opacity-20"
+        className="absolute inset-0 z-0 opacity-60"
         style={{
-          background:
-            'radial-gradient(ellipse at 20% 50%, rgba(16,185,129,0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(59,130,246,0.12) 0%, transparent 60%)',
+          background: `radial-gradient(ellipse at 20% 50%, var(--gradient-a) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, var(--gradient-b) 0%, transparent 60%)`,
         }}
       />
 
@@ -41,7 +40,7 @@ export default function ProjectDetail() {
         <motion.div {...fadeUp(0)}>
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-sm font-mono text-text-muted hover:text-emerald-accent transition-colors mb-12 group"
+            className="inline-flex items-center gap-2 text-sm font-mono text-text-muted hover:text-sky-accent transition-colors mb-12 group"
           >
             <span className="group-hover:-translate-x-1 transition-transform">
               ←
@@ -82,7 +81,7 @@ export default function ProjectDetail() {
           {/* Divider */}
           <motion.div
             {...fadeUp(0.3)}
-            className="border-t border-white/10 mb-8"
+            className="border-t border-navy/10 mb-8"
           />
 
           {/* Summary */}
@@ -98,7 +97,7 @@ export default function ProjectDetail() {
             <motion.div {...fadeUp(0.38)} className="space-y-4 mb-10">
               {project.highlights.map(({ label, text }) => (
                 <div key={label} className="flex gap-4">
-                  <span className="text-emerald-accent mt-0.5 flex-shrink-0">
+                  <span className="text-sky-accent mt-0.5 flex-shrink-0">
                     ▸
                   </span>
                   <p className="text-text-muted leading-relaxed text-sm">
@@ -117,7 +116,7 @@ export default function ProjectDetail() {
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs px-2.5 py-1 rounded-sm border border-white/10 bg-white/5 text-text-muted"
+                className="text-xs px-2.5 py-1 rounded-sm border border-navy/10 bg-navy/5 text-text-muted"
               >
                 {tag}
               </span>
@@ -131,8 +130,8 @@ export default function ProjectDetail() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-accent text-bg font-bold text-sm tracking-widest uppercase rounded-sm hover:shadow-lg transition-shadow"
-                style={{ boxShadow: '0 0 20px rgba(16,185,129,0.3)' }}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-coral-accent text-white font-bold text-sm tracking-widest uppercase rounded-sm hover:shadow-lg transition-shadow"
+                style={{ boxShadow: '0 0 20px var(--glow-coral)' }}
               >
                 View Project →
               </a>

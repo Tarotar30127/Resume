@@ -27,12 +27,12 @@ export default function Contact() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
-          <p className="text-emerald-accent text-sm font-medium tracking-[0.2em] uppercase mb-3">
+          <p className="text-sky-accent text-sm font-medium tracking-[0.2em] uppercase mb-3">
             Get In Touch
           </p>
           <h2 className="section-title text-text-primary mb-6">
             Let&apos;s{' '}
-            <span className="text-emerald-accent neon-text">Connect</span>
+            <span className="text-sky-accent neon-text">Connect</span>
           </h2>
           <p className="text-text-muted leading-relaxed mb-12 text-lg">
             Whether you&apos;re interested in collaborating on a project, have a
@@ -44,12 +44,12 @@ export default function Contact() {
             href={`mailto:${SOCIAL_LINKS.email}`}
             whileHover={{
               scale: 1.04,
-              boxShadow: '0 0 40px rgba(16,185,129,0.25)',
+              boxShadow: '0 0 40px var(--glow-coral)',
             }}
             whileTap={{ scale: 0.97 }}
             className="inline-block glass glass-hover rounded-full px-10 py-4 text-lg font-semibold text-text-primary mb-12 transition-all"
           >
-            <span className="text-emerald-accent">✉</span> {SOCIAL_LINKS.email}
+            <span className="text-sky-accent">✉</span> {SOCIAL_LINKS.email}
           </motion.a>
 
           {/* Social icons */}
@@ -74,7 +74,7 @@ export default function Contact() {
                 whileHover={{ scale: 1.15, y: -4 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label={label}
-                className="glass glass-hover rounded-2xl p-4 text-text-muted hover:text-emerald-accent"
+                className="glass glass-hover rounded-2xl p-4 text-text-muted hover:text-sky-accent"
               >
                 {icon}
               </motion.a>
@@ -82,12 +82,12 @@ export default function Contact() {
           </div>
 
           {/* Divider */}
-          <div className="border-t border-white/5 pt-8">
+          <div className="border-t border-navy/5 pt-8">
             <p className="text-text-muted text-sm">
               Designed &amp; built by{' '}
               <span className="text-text-primary font-medium">Carter Lee</span>
               {' · '}
-              <span className="text-emerald-accent">React</span> + Tailwind CSS
+              <span className="text-sky-accent">React</span> + Tailwind CSS
             </p>
           </div>
         </motion.div>

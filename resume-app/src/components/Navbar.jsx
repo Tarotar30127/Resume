@@ -54,7 +54,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/5 backdrop-blur-xl border-b border-emerald-accent/30 shadow-lg shadow-black/30'
+          ? 'bg-white/85 backdrop-blur-xl border-b border-sky-accent/30 shadow-lg shadow-slate-300/40'
           : 'bg-transparent border-b border-transparent'
       }`}
     >
@@ -63,11 +63,11 @@ export default function Navbar() {
           type="button"
           aria-label="Carter Lee — scroll to top"
           className="flex items-center gap-2.5 md:gap-3 cursor-pointer bg-transparent border-0 p-0 text-left"
-          whileHover={{ color: '#10b981' }}
+          whileHover={{ color: 'var(--color-sky)' }}
           transition={{ duration: 0.2 }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <span className="relative flex-shrink-0 rounded-full overflow-hidden ring-2 ring-emerald-accent/35 shadow-md shadow-black/25">
+          <span className="relative flex-shrink-0 rounded-full overflow-hidden ring-2 ring-sky-accent/35 shadow-md shadow-slate-300/30">
             <img
               src="/Cartoon.png"
               alt=""
@@ -77,8 +77,8 @@ export default function Navbar() {
               draggable={false}
             />
           </span>
-          <span className="font-display font-black text-lg md:text-xl text-white tracking-wide">
-            Carter <span className="text-emerald-accent">Lee</span>
+          <span className="font-display font-black text-lg md:text-xl text-text-primary tracking-wide">
+            Carter <span className="text-sky-accent">Lee</span>
           </span>
         </motion.button>
 
@@ -92,7 +92,7 @@ export default function Navbar() {
                   onClick={() => handleNavClick(link)}
                   className={`text-sm font-medium transition-all duration-200 relative pb-0.5 ${
                     isActive
-                      ? 'text-emerald-accent'
+                      ? 'text-sky-accent'
                       : 'text-text-muted hover:text-text-primary'
                   }`}
                 >
@@ -100,7 +100,7 @@ export default function Navbar() {
                   {isActive && (
                     <motion.span
                       layoutId="activeLink"
-                      className="absolute -bottom-1 left-0 right-0 h-px bg-emerald-accent"
+                      className="absolute -bottom-1 left-0 right-0 h-px bg-sky-accent"
                     />
                   )}
                 </button>
@@ -138,14 +138,14 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden overflow-hidden bg-surface/95 backdrop-blur-xl border-b border-white/10"
+            className="md:hidden overflow-hidden bg-white/95 backdrop-blur-xl border-b border-sky-accent/20"
           >
             <ul className="flex flex-col py-4">
               {NAV_LINKS.map((link) => (
                 <li key={link}>
                   <button
                     onClick={() => handleNavClick(link)}
-                    className="w-full text-left px-8 py-3 text-text-muted hover:text-emerald-accent hover:bg-white/5 transition-colors text-sm font-medium"
+                    className="w-full text-left px-8 py-3 text-text-muted hover:text-sky-accent hover:bg-sky-accent/5 transition-colors text-sm font-medium"
                   >
                     {link}
                   </button>

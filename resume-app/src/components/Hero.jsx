@@ -17,10 +17,9 @@ export default function Hero() {
     >
       {/* Ambient gradient */}
       <div
-        className="absolute inset-0 z-0 opacity-30"
+        className="absolute inset-0 z-0 opacity-60"
         style={{
-          background:
-            'radial-gradient(ellipse at 20% 50%, rgba(16,185,129,0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(59,130,246,0.12) 0%, transparent 60%)',
+          background: `radial-gradient(ellipse at 20% 50%, var(--gradient-a) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, var(--gradient-b) 0%, transparent 60%)`,
         }}
       />
 
@@ -31,16 +30,19 @@ export default function Hero() {
         <motion.div {...fadeUp(0.1)}>
           <h1
             className="font-display font-black leading-none tracking-tight mb-4 neon-text"
-            style={{ fontSize: 'clamp(2.8rem, 8vw, 7rem)', color: '#f1f5f9' }}
+            style={{
+              fontSize: 'clamp(2.8rem, 8vw, 7rem)',
+              color: 'var(--color-navy)',
+            }}
           >
-            Carter <span className="text-emerald-accent">Lee</span>
+            Carter <span className="text-sky-accent">Lee</span>
           </h1>
         </motion.div>
 
         {/* Rule */}
         <motion.div
           {...fadeUp(0.2)}
-          className="border-t border-text-primary/20 mb-5 max-w-xs mx-auto"
+          className="border-t border-navy/20 mb-5 max-w-xs mx-auto"
         />
 
         {/* Typewriter */}
@@ -66,8 +68,8 @@ export default function Hero() {
             href="#projects"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="px-8 py-3 bg-emerald-accent text-bg font-bold text-sm tracking-widest uppercase hover:shadow-lg transition-shadow rounded-sm"
-            style={{ boxShadow: '0 0 20px rgba(16,185,129,0.3)' }}
+            className="px-8 py-3 bg-coral-accent text-white font-bold text-sm tracking-widest uppercase hover:shadow-lg transition-shadow rounded-sm"
+            style={{ boxShadow: '0 0 20px var(--glow-coral)' }}
           >
             View My Work ↓
           </motion.a>

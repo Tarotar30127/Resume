@@ -13,18 +13,18 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <p className="text-emerald-accent text-sm font-medium tracking-[0.2em] uppercase mb-3">
+          <p className="text-sky-accent text-sm font-medium tracking-[0.2em] uppercase mb-3">
             Where I&apos;ve Been
           </p>
           <h2 className="section-title text-text-primary">
-            Work <span className="text-emerald-accent">Experience</span>
+            Work <span className="text-sky-accent">Experience</span>
           </h2>
         </motion.div>
 
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-accent/50 via-blue-accent/30 to-transparent transform md:-translate-x-0.5" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-sky-accent/50 via-coral-accent/30 to-transparent transform md:-translate-x-0.5" />
 
           <div className="space-y-16">
             {EXPERIENCE.map((job, index) => {
@@ -36,7 +36,7 @@ export default function Experience() {
                 >
                   {/* Timeline dot */}
                   <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 -translate-y-0 flex items-center justify-center z-10">
-                    <div className="w-3 h-3 rounded-full bg-emerald-accent ring-4 ring-bg ring-offset-0 shadow-lg shadow-emerald-accent/50" />
+                    <div className="w-3 h-3 rounded-full bg-sky-accent ring-4 ring-bg ring-offset-0 shadow-lg shadow-sky-accent/50" />
                   </div>
 
                   {/* Card — alternates sides on desktop */}
@@ -49,21 +49,21 @@ export default function Experience() {
                       isLeft ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'
                     }`}
                   >
-                    <div className="glass rounded-2xl p-6 hover:border-white/20 transition-colors duration-300">
+                    <div className="glass rounded-2xl p-6 hover:border-sky-accent/30 transition-colors duration-300">
                       {/* Header */}
                       <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
                         <div>
                           <h3 className="font-display font-bold text-lg text-text-primary">
                             {job.role}
                           </h3>
-                          <p className="text-emerald-accent font-semibold text-sm">
+                          <p className="text-sky-accent font-semibold text-sm">
                             {job.company}
                           </p>
                           <p className="text-text-muted text-xs mt-0.5">
                             {job.location}
                           </p>
                         </div>
-                        <span className="flex-shrink-0 glass rounded-full px-3 py-1 text-xs text-text-muted border border-white/10">
+                        <span className="flex-shrink-0 glass rounded-full px-3 py-1 text-xs text-text-muted border border-sky-accent/20">
                           {job.period}
                         </span>
                       </div>
@@ -79,7 +79,7 @@ export default function Experience() {
                             transition={{ duration: 0.4, delay: 0.1 * bi }}
                             className="flex gap-3 text-sm text-text-muted leading-relaxed"
                           >
-                            <span className="text-emerald-accent mt-1 flex-shrink-0">
+                            <span className="text-sky-accent mt-1 flex-shrink-0">
                               ▸
                             </span>
                             {bullet}

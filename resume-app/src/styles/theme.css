@@ -1,0 +1,35 @@
+/* ============================================================
+   SINGLE SOURCE OF TRUTH — all palette values live here.
+   To retheme the site, only edit this file.
+   ============================================================ */
+
+:root {
+  /* ── Base surfaces ────────────────────────────────────────── */
+  --color-bg: #faf8f5; /* cream page background        */
+  --color-surface: #eef7fb; /* sky-tinted card surface      */
+  --color-surface-2: #dff0f7; /* deeper sky for nesting       */
+
+  /* ── Accent palette ──────────────────────────────────────── */
+  --color-sky: #a8d8ea; /* muted powder blue (primary)  */
+  --color-coral: #ff6b4a; /* warm coral orange (CTAs)     */
+  --color-terracotta: #c4622d; /* deep orange (borders/links)  */
+  --color-navy: #1a2744; /* dark navy (headlines)        */
+
+  /* ── Text ─────────────────────────────────────────────────── */
+  --color-text-primary: #1a2744; /* same as navy                 */
+  --color-text-muted: #4a6274; /* muted slate-navy             */
+
+  /* ── Semantic / composite ────────────────────────────────── */
+  --gradient-a: rgba(168, 216, 234, 0.35); /* sky ambient      */
+  --gradient-b: rgba(255, 107, 74, 0.18); /* coral ambient    */
+  --glow-primary: rgba(168, 216, 234, 0.5); /* sky glow         */
+  --glow-coral: rgba(255, 107, 74, 0.35); /* coral glow/shadow */
+  --shadow-card: rgba(168, 216, 234, 0.35); /* card hover shadow */
+
+  /* ── RGB channels for Tailwind opacity modifiers (/30 etc.) ─ */
+  --rgb-bg: 250 248 245;
+  --rgb-sky: 168 216 234;
+  --rgb-coral: 255 107 74;
+  --rgb-navy: 26 39 68;
+  --rgb-terracotta: 196 98 45;
+}

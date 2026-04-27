@@ -73,12 +73,11 @@ export default function About() {
               className="w-56 h-56 md:w-72 md:h-72 rounded-2xl object-cover object-top"
               style={{
                 boxShadow:
-                  '0 0 60px rgba(16,185,129,0.15), 0 20px 60px rgba(0,0,0,0.5)',
+                  '0 0 60px var(--shadow-card), 0 20px 60px rgba(26,39,68,0.12)',
               }}
             />
-            {/* Decorative corner accent */}
-            <div className="absolute -bottom-3 -right-3 w-24 h-24 border-b-2 border-r-2 border-emerald-accent/40 rounded-br-2xl" />
-            <div className="absolute -top-3 -left-3 w-24 h-24 border-t-2 border-l-2 border-blue-accent/30 rounded-tl-2xl" />
+            <div className="absolute -bottom-3 -right-3 w-24 h-24 border-b-2 border-r-2 border-sky-accent/40 rounded-br-2xl" />
+            <div className="absolute -top-3 -left-3 w-24 h-24 border-t-2 border-l-2 border-coral-accent/30 rounded-tl-2xl" />
           </div>
 
           {/* Social links */}
@@ -91,7 +90,7 @@ export default function About() {
                 rel="noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="glass glass-hover rounded-xl p-3 text-text-muted hover:text-emerald-accent"
+                className="glass glass-hover rounded-xl p-3 text-text-muted hover:text-sky-accent"
                 aria-label={label}
               >
                 {icon}
@@ -109,12 +108,12 @@ export default function About() {
           className="space-y-8"
         >
           <div>
-            <p className="text-emerald-accent text-sm font-medium tracking-[0.2em] uppercase mb-3">
+            <p className="text-sky-accent text-sm font-medium tracking-[0.2em] uppercase mb-3">
               About Me
             </p>
             <h2 className="section-title text-text-primary">
               Building at the{' '}
-              <span className="text-emerald-accent">intersection</span>
+              <span className="text-sky-accent">intersection</span>
             </h2>
           </div>
 
@@ -145,7 +144,7 @@ export default function About() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: 0.05 * i }}
-                  className="px-4 py-1.5 rounded-full text-sm text-emerald-accent border border-emerald-accent/30 bg-emerald-accent/5 font-medium"
+                  className="px-4 py-1.5 rounded-full text-sm text-sky-accent border border-sky-accent/30 bg-sky-accent/10 font-medium"
                 >
                   {label}
                 </motion.span>

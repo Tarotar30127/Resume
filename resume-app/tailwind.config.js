@@ -1,16 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,jsx}'],
+  content: ['./index.html', './src/**/*.{js,jsx,css}'],
   theme: {
     extend: {
       colors: {
-        bg: '#0a0a0f',
-        surface: '#12121a',
-        'surface-2': '#1a1a28',
-        'emerald-accent': '#10b981',
-        'blue-accent': '#3b82f6',
-        'text-primary': '#f1f5f9',
-        'text-muted': '#64748b',
+        bg: 'rgb(var(--rgb-bg)          / <alpha-value>)',
+        surface: '#EEF7FB',
+        'surface-2': '#DFF0F7',
+        'sky-accent': 'rgb(var(--rgb-sky)         / <alpha-value>)',
+        'coral-accent': 'rgb(var(--rgb-coral)        / <alpha-value>)',
+        terracotta: 'rgb(var(--rgb-terracotta)   / <alpha-value>)',
+        navy: 'rgb(var(--rgb-navy)         / <alpha-value>)',
+        'text-primary': '#1a2744',
+        'text-muted': '#4A6274',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

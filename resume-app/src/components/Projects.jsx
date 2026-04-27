@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { PROJECTS } from '../data/content';
 
 const BADGE_STYLES = {
-  emerald: 'bg-emerald-accent text-bg',
-  blue: 'bg-blue-accent text-white',
-  amber: 'bg-amber-400 text-bg',
+  emerald: 'bg-sky-accent text-navy',
+  blue: 'bg-coral-accent text-white',
+  amber: 'bg-amber-400 text-white',
 };
 
 const cardVariants = {
@@ -29,7 +29,7 @@ function NewsCard({ project }) {
       whileHover={{
         y: -4,
         boxShadow:
-          '0 24px 48px rgba(16,185,129,0.14), 0 0 0 1px rgba(16,185,129,0.18)',
+          '0 24px 48px var(--shadow-card), 0 0 0 1px rgba(168,216,234,0.18)',
       }}
       className="glass rounded-xl overflow-hidden cursor-pointer group flex flex-col mb-6 break-inside-avoid"
     >
@@ -52,12 +52,12 @@ function NewsCard({ project }) {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-white/10 mb-4" />
+        <div className="border-t border-navy/10 mb-4" />
 
         {/* Headline */}
         <Link to={`/projects/${project.id}`}>
           <h3
-            className={`font-serif font-bold leading-snug mb-3 transition-colors duration-300 hover:text-emerald-accent ${
+            className={`font-serif font-bold leading-snug mb-3 transition-colors duration-300 hover:text-sky-accent ${
               isFeatured ? 'text-2xl md:text-3xl' : 'text-xl'
             } text-text-primary`}
           >
@@ -83,7 +83,7 @@ function NewsCard({ project }) {
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs px-2.5 py-1 rounded-sm border border-white/10 bg-white/5 text-text-muted"
+                className="text-xs px-2.5 py-1 rounded-sm border border-navy/10 bg-navy/5 text-text-muted"
               >
                 {tag}
               </span>
@@ -94,7 +94,7 @@ function NewsCard({ project }) {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-mono text-emerald-accent uppercase tracking-widest hover:underline shrink-0"
+              className="text-xs font-mono text-sky-accent uppercase tracking-widest hover:underline shrink-0"
               onClick={(e) => e.stopPropagation()}
             >
               Read More →
@@ -124,7 +124,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-10"
         >
-          <p className="text-xs font-mono text-emerald-accent uppercase tracking-[0.3em] mb-3">
+          <p className="text-xs font-mono text-sky-accent uppercase tracking-[0.3em] mb-3">
             Selected Work
           </p>
           <h2 className="section-title text-text-primary">Projects</h2>
@@ -145,7 +145,7 @@ export default function Projects() {
               placeholder="Year (e.g. 2024)"
               value={searchYear}
               onChange={(e) => setSearchYear(e.target.value)}
-              className="glass rounded-full px-4 py-2 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:ring-1 focus:ring-emerald-accent/50 w-40 bg-transparent"
+              className="glass rounded-full px-4 py-2 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:ring-1 focus:ring-sky-accent/50 w-40 bg-transparent"
             />
             {searchYear && (
               <button
@@ -173,7 +173,7 @@ export default function Projects() {
               </p>
               <button
                 onClick={() => setSearchYear('')}
-                className="mt-4 text-xs text-emerald-accent font-mono hover:underline"
+                className="mt-4 text-xs text-sky-accent font-mono hover:underline"
               >
                 Clear filters
               </button>
