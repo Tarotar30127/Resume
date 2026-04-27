@@ -10,14 +10,6 @@ const fadeUp = (delay = 0) => ({
 });
 
 export default function Hero() {
-  const today = new Date();
-  const edition = today.toLocaleDateString('en-US', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
-
   return (
     <section
       id="hero"
@@ -35,53 +27,31 @@ export default function Hero() {
       <ParticleBackground />
 
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 pt-24 pb-20">
-        {/* Edition line */}
-        <motion.p
-          {...fadeUp(0)}
-          className="text-text-muted text-xs font-mono tracking-[0.25em] uppercase mb-5"
-        >
-          Vol. I &nbsp;•&nbsp; Provo, Utah &nbsp;•&nbsp; {edition}
-        </motion.p>
-
-        {/* Top rule */}
-        <motion.div
-          {...fadeUp(0.1)}
-          className="border-t-2 border-text-primary/20 mb-5"
-        />
-
-        {/* Masthead */}
-        <motion.div {...fadeUp(0.2)}>
+        {/* Name */}
+        <motion.div {...fadeUp(0.1)}>
           <h1
-            className="font-serif font-black leading-none tracking-tight mb-3 neon-text"
+            className="font-display font-black leading-none tracking-tight mb-4 neon-text"
             style={{ fontSize: 'clamp(2.8rem, 8vw, 7rem)', color: '#f1f5f9' }}
           >
-            THE LEE <span className="text-emerald-accent">GAZETTE</span>
+            Carter <span className="text-emerald-accent">Lee</span>
           </h1>
         </motion.div>
 
-        {/* Thin rule */}
+        {/* Rule */}
         <motion.div
-          {...fadeUp(0.28)}
-          className="border-t border-text-primary/10 mb-5"
+          {...fadeUp(0.2)}
+          className="border-t border-text-primary/20 mb-5 max-w-xs mx-auto"
         />
-
-        {/* Sub-headline */}
-        <motion.h2
-          {...fadeUp(0.35)}
-          className="font-serif text-2xl md:text-3xl text-text-muted mb-6 tracking-wide"
-        >
-          Coding the Future.
-        </motion.h2>
 
         {/* Typewriter */}
         <motion.div
-          {...fadeUp(0.45)}
+          {...fadeUp(0.3)}
           className="h-10 flex items-center justify-center mb-10"
         >
           <TypeAnimation
             sequence={TYPEWRITER_SEQUENCE}
             repeat={Infinity}
-            className="text-base md:text-lg text-text-muted font-light tracking-wide"
+            className="text-lg md:text-xl text-text-muted font-light tracking-wide"
             cursor={true}
             style={{ display: 'inline-block' }}
           />
@@ -89,7 +59,7 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <motion.div
-          {...fadeUp(0.55)}
+          {...fadeUp(0.45)}
           className="flex flex-wrap gap-4 justify-center mb-16"
         >
           <motion.a
@@ -99,7 +69,7 @@ export default function Hero() {
             className="px-8 py-3 bg-emerald-accent text-bg font-bold text-sm tracking-widest uppercase hover:shadow-lg transition-shadow rounded-sm"
             style={{ boxShadow: '0 0 20px rgba(16,185,129,0.3)' }}
           >
-            Read the Latest ↓
+            View My Work ↓
           </motion.a>
           <motion.a
             href="#contact"
@@ -107,7 +77,7 @@ export default function Hero() {
             whileTap={{ scale: 0.97 }}
             className="px-8 py-3 glass glass-hover font-bold text-sm tracking-widest uppercase text-text-primary rounded-sm"
           >
-            Contact the Editor →
+            Get In Touch →
           </motion.a>
         </motion.div>
 

@@ -156,12 +156,18 @@ export default function About() {
           {/* Education */}
           <div className="glass rounded-xl p-5">
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-lg bg-emerald-accent/10 border border-emerald-accent/20 flex items-center justify-center flex-shrink-0">
-                <span className="text-emerald-accent text-lg">🎓</span>
+              <div className="h-10 min-w-[3.25rem] px-2 rounded-lg bg-white flex items-center justify-center flex-shrink-0 shadow-sm ring-1 ring-black/10">
+                <img
+                  src="/byu-wordmark.svg"
+                  alt=""
+                  width={72}
+                  height={22}
+                  className="h-[1.375rem] w-auto max-w-[4.25rem] object-contain"
+                />
               </div>
               <div>
                 <p className="text-text-primary font-semibold">
-                  BS Computer Science
+                  BS Machine Learning
                 </p>
                 <p className="text-text-muted text-sm">
                   Brigham Young University

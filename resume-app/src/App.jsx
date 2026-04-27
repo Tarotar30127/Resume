@@ -1,22 +1,35 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import Navbar from './components/Navbar';
-import NewsTicker from './components/NewsTicker';
 import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import ProjectDetail from './pages/ProjectDetail';
 
-export default function App() {
+function MainPage() {
   return (
-    <main className="bg-bg min-h-screen">
-      <Navbar />
-      <NewsTicker />
+    <>
       <Hero />
       <About />
       <Experience />
       <Projects />
       <Contact />
-    </main>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <main className="bg-bg min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 }

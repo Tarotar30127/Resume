@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { PROJECTS } from '../data/content';
 
 const BADGE_STYLES = {
@@ -30,13 +31,11 @@ function NewsCard({ project }) {
           '0 24px 48px rgba(16,185,129,0.14), 0 0 0 1px rgba(16,185,129,0.18)',
       }}
       className={`glass rounded-xl overflow-hidden cursor-pointer group flex flex-col ${
-        isFeatured ? 'md:col-span-2 md:row-span-2' : ''
+        isFeatured ? 'md:col-span-2 md:row-span-2 md:self-start' : ''
       }`}
     >
       {/* Card inner */}
-      <div
-        className={`flex flex-col flex-1 p-7 ${isFeatured ? 'md:p-10' : ''}`}
-      >
+      <div className={`flex flex-col p-7 ${isFeatured ? 'md:p-10' : ''}`}>
         {/* Badge + category row */}
         <div className="flex items-center gap-3 mb-4">
           <span
@@ -53,13 +52,15 @@ function NewsCard({ project }) {
         <div className="border-t border-white/10 mb-4" />
 
         {/* Headline */}
-        <h3
-          className={`font-serif font-bold leading-snug mb-3 transition-colors duration-300 group-hover:text-emerald-accent ${
-            isFeatured ? 'text-2xl md:text-3xl' : 'text-xl'
-          } text-text-primary`}
-        >
-          {project.headline}
-        </h3>
+        <Link to={`/projects/${project.id}`}>
+          <h3
+            className={`font-serif font-bold leading-snug mb-3 transition-colors duration-300 hover:text-emerald-accent ${
+              isFeatured ? 'text-2xl md:text-3xl' : 'text-xl'
+            } text-text-primary`}
+          >
+            {project.headline}
+          </h3>
+        </Link>
 
         {/* Byline */}
         <p className="text-xs font-mono text-text-muted mb-4 uppercase tracking-wide">
@@ -68,7 +69,7 @@ function NewsCard({ project }) {
 
         {/* Summary */}
         <p
-          className={`text-text-muted leading-relaxed flex-grow ${isFeatured ? 'text-base' : 'text-sm'}`}
+          className={`text-text-muted leading-relaxed ${isFeatured ? 'text-base' : 'text-sm'}`}
         >
           {project.summary}
         </p>
@@ -106,7 +107,7 @@ export default function Projects() {
   return (
     <section id="projects" className="section-padding">
       <div className="max-w-7xl mx-auto">
-        {/* Section header — newspaper style */}
+        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -114,15 +115,10 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-14"
         >
-          <div className="border-t-4 border-text-primary/20 pt-4">
-            <p className="text-xs font-mono text-emerald-accent uppercase tracking-[0.3em] mb-2">
-              Field Dispatch
-            </p>
-            <h2 className="font-serif font-black text-4xl md:text-5xl text-text-primary leading-tight">
-              The Latest <span className="text-emerald-accent">Reports</span>
-            </h2>
-            <div className="border-b border-text-primary/10 mt-4" />
-          </div>
+          <p className="text-xs font-mono text-emerald-accent uppercase tracking-[0.3em] mb-3">
+            Selected Work
+          </p>
+          <h2 className="section-title text-text-primary">Projects</h2>
         </motion.div>
 
         {/* Bento grid */}

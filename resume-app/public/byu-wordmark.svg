@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 28" fill="none" aria-hidden="true">
+  <!-- BYU block-style wordmark (navy per brand palette) -->
+  <text
+    x="44"
+    y="21"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+    font-size="22"
+    font-weight="900"
+    letter-spacing="-0.06em"
+    fill="#002E5D"
+  >
+    BYU
+  </text>
+</svg>

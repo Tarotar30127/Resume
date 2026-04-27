@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { NAV_LINKS } from '../data/content';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => {
@@ -29,8 +32,19 @@ export default function Navbar() {
 
   const handleNavClick = (link) => {
     setMenuOpen(false);
-    const el = document.getElementById(link.toLowerCase());
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    const sectionId = link.toLowerCase();
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        document
+          .getElementById(sectionId)
+          ?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      document
+        .getElementById(sectionId)
+        ?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -45,14 +59,28 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
-        <motion.span
-          className="font-serif font-black text-lg md:text-xl text-white tracking-widest cursor-pointer uppercase"
+        <motion.button
+          type="button"
+          aria-label="Carter Lee — scroll to top"
+          className="flex items-center gap-2.5 md:gap-3 cursor-pointer bg-transparent border-0 p-0 text-left"
           whileHover={{ color: '#10b981' }}
           transition={{ duration: 0.2 }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          The Lee <span className="text-emerald-accent">Gazette</span>
-        </motion.span>
+          <span className="relative flex-shrink-0 rounded-full overflow-hidden ring-2 ring-emerald-accent/35 shadow-md shadow-black/25">
+            <img
+              src="/Logo.png"
+              alt=""
+              width={40}
+              height={40}
+              className="h-9 w-9 md:h-10 md:w-10 object-cover object-[center_12%]"
+              draggable={false}
+            />
+          </span>
+          <span className="font-display font-black text-lg md:text-xl text-white tracking-wide">
+            Carter <span className="text-emerald-accent">Lee</span>
+          </span>
+        </motion.button>
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-8">
