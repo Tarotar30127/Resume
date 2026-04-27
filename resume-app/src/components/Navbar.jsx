@@ -69,7 +69,7 @@ export default function Navbar() {
         >
           <span className="relative flex-shrink-0 rounded-full overflow-hidden ring-2 ring-emerald-accent/35 shadow-md shadow-black/25">
             <img
-              src="/Logo.png"
+              src="/Cartoon.png"
               alt=""
               width={40}
               height={40}
