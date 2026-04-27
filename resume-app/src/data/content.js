@@ -16,7 +16,7 @@ export const EXPERIENCE = [
     role: 'Frontend Developer Intern',
     company: 'SureMark Digital',
     location: 'Provo, Utah',
-    period: 'Sept 2025 – Present',
+    period: 'Sept 2025 – Apr 2026',
     bullets: [
       'Built the "Sign Content" Chrome Extension feature end-to-end, translating Figma designs into production-ready code',
       'Authored responsive HTML email templates adhering to cross-client compatibility standards',
@@ -60,6 +60,46 @@ export const EXPERIENCE = [
 ];
 
 export const PROJECTS = [
+  {
+    id: 'Orbit_Extension',
+    badge: 'FEATURED',
+    badgeColor: 'emerald',
+    category: 'Proactive Wellness & AI',
+    filterCategory: 'Web Application',
+    date: '2024',
+    headline: '🌿 Orbit: Time Management',
+    byline: 'By Carter Lee, Kyle Mak & Collin Verbanatz  |  Hackathon Project',
+    summary:
+      'Developed for a student-focused hackathon, Orbit is a Chrome Extension designed to break the "Guilt Cycle" of modern academic life. While most calendars only track deadlines, Orbit tracks the human behind the schedule—integrating AI-driven wellness breaks, proactive rescheduling, and real-time community study rooms.',
+    highlights: [
+      {
+        label: 'The Guilt Cycle Problem',
+        text: 'Most productivity tools amplify anxiety by surfacing "Overdue" alerts. Orbit replaces that pattern with a Google Gemini AI companion that offers reassuring, context-aware advice and quietly reschedules missed tasks.',
+      },
+      {
+        label: 'Invisible Schedules',
+        text: 'Co-developed the core integration with Google Calendar and Tasks APIs to surface unscheduled gaps—moments where students forget to eat, rest, or decompress—and fill them with Wellness Breaks.',
+      },
+      {
+        label: 'Smart Scheduling Algorithm',
+        text: 'Built a scheduling engine that respects user-defined sleep cycles and identifies contiguous gaps ≥ 30 minutes to insert restorative micro-breaks without disrupting study blocks.',
+      },
+      {
+        label: 'Real-time Community Layer',
+        text: 'Implemented Supabase-backed live chat and focus rooms, enabling collaborative study sessions and peer accountability directly inside the extension.',
+      },
+    ],
+    tags: [
+      'React 19',
+      'TypeScript',
+      'Supabase',
+      'Google Gemini AI',
+      'Google Calendar API',
+      'Tailwind CSS',
+    ],
+    link: 'https://github.com/KylexMak/orbit-extension',
+    featured: true,
+  },
   {
     id: 'Excel_Learning_Path',
     badge: 'LATEST',

@@ -28,14 +28,17 @@ function NewsCard({ project }) {
       exit="exit"
       whileHover={{
         y: -4,
-        boxShadow: '0 24px 48px rgba(16,185,129,0.14), 0 0 0 1px rgba(16,185,129,0.18)',
+        boxShadow:
+          '0 24px 48px rgba(16,185,129,0.14), 0 0 0 1px rgba(16,185,129,0.18)',
       }}
       className="glass rounded-xl overflow-hidden cursor-pointer group flex flex-col mb-6 break-inside-avoid"
     >
       <div className={`flex flex-col p-7 ${isFeatured ? 'md:p-9' : ''}`}>
         {/* Badge + category row */}
         <div className="flex items-center gap-3 mb-4">
-          <span className={`text-xs font-bold px-2.5 py-0.5 uppercase tracking-widest rounded-sm ${badgeClass}`}>
+          <span
+            className={`text-xs font-bold px-2.5 py-0.5 uppercase tracking-widest rounded-sm ${badgeClass}`}
+          >
             {project.badge}
           </span>
           <span className="text-xs font-mono text-text-muted uppercase tracking-wider">
@@ -53,9 +56,11 @@ function NewsCard({ project }) {
 
         {/* Headline */}
         <Link to={`/projects/${project.id}`}>
-          <h3 className={`font-serif font-bold leading-snug mb-3 transition-colors duration-300 hover:text-emerald-accent ${
-            isFeatured ? 'text-2xl md:text-3xl' : 'text-xl'
-          } text-text-primary`}>
+          <h3
+            className={`font-serif font-bold leading-snug mb-3 transition-colors duration-300 hover:text-emerald-accent ${
+              isFeatured ? 'text-2xl md:text-3xl' : 'text-xl'
+            } text-text-primary`}
+          >
             {project.headline}
           </h3>
         </Link>
@@ -66,7 +71,9 @@ function NewsCard({ project }) {
         </p>
 
         {/* Summary */}
-        <p className={`text-text-muted leading-relaxed ${isFeatured ? 'text-base' : 'text-sm'}`}>
+        <p
+          className={`text-text-muted leading-relaxed ${isFeatured ? 'text-base' : 'text-sm'}`}
+        >
           {project.summary}
         </p>
 
@@ -102,8 +109,8 @@ function NewsCard({ project }) {
 export default function Projects() {
   const [searchYear, setSearchYear] = useState('');
 
-  const filtered = PROJECTS.filter((p) =>
-    !searchYear.trim() || (p.date ?? '').includes(searchYear.trim())
+  const filtered = PROJECTS.filter(
+    (p) => !searchYear.trim() || (p.date ?? '').includes(searchYear.trim())
   );
 
   return (
@@ -149,7 +156,6 @@ export default function Projects() {
               </button>
             )}
           </div>
-
         </motion.div>
 
         {/* Masonry grid */}
@@ -162,7 +168,9 @@ export default function Projects() {
               exit={{ opacity: 0 }}
               className="text-center py-24"
             >
-              <p className="text-text-muted text-sm font-mono">No projects found.</p>
+              <p className="text-text-muted text-sm font-mono">
+                No projects found.
+              </p>
               <button
                 onClick={() => setSearchYear('')}
                 className="mt-4 text-xs text-emerald-accent font-mono hover:underline"
